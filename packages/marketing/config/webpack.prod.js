@@ -7,7 +7,8 @@ const commonConfig =require('./webpack.common');
 const prodConfig={
     mode:'production',
     output:{
-        filename:'[name].bundle.js'
+        filename:'[name].bundle.js',
+        publicPath:'/marketing/latest/'
     },
     plugins:[
         new ModuleFederationPlugin({

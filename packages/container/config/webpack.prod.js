@@ -8,13 +8,14 @@ const domain=process.env.PRODUCTION_DOMAIN;
 const prodConfig={
     mode:'production',
     output:{
-        filename:'[name].bundle.js'
+        filename:'[name].bundle.js',
+        publicPath:'/container/latest/'
     },
     plugins:[
         new ModuleFederationPlugin({
             name:'container',
             exposes:{
-                './marketing':`marketing@${domain}/marketing/remoteEntry.js`
+                './marketing':`marketing@${domain}/marketing/latest/remoteEntry.js`
             },
             shared:packageJson.dependencies
         })
