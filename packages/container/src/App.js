@@ -6,7 +6,7 @@ import Header from './components/Header';
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className='app'>
         <Header />
         <MarketingApp />
       </div>
