@@ -12,13 +12,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
-        <div className='abc'>
+        <div className='app'>
           <Header />
           <MarketingApp />
         </div>
       </StylesProvider>
     </BrowserRouter>
-
   )
 }
 
